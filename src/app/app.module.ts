@@ -6,16 +6,20 @@ import {StudentComponent} from "./student/student.component";
 import {ClassroomComponent} from "./classroom/classroom.component";
 import {ProductsComponent} from "./products/products.component";
 import {ProductComponent} from "./product/product.component";
+import {WeatherComponent} from "./weather/weather.component";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentComponent,
     ClassroomComponent,
-    ProductsComponent,ProductComponent
+    ProductsComponent,ProductComponent,
+    WeatherComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
