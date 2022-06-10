@@ -3,7 +3,8 @@ import {IProduct} from "../interfaces/product.interface";
 
 @Component({
   selector: 'app-products',
-  templateUrl: './products.component.html'
+  templateUrl: './products.component.html',
+  styleUrls: []
 })
 export class ProductsComponent {
   data: IProduct[] = [
