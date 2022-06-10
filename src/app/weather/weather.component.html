@@ -1,5 +1,11 @@
+
 <button type="button" (click)="hanoi()">Hà Nội</button>
 <button type="button" (click)="london()">London</button>
+<form (submit)="getData()">
+  <input type="text" name="cityCode" [(ngModel)]="cityCode" />
+  <button type="submit">Check Weather</button>
+</form>
+<h3>{{cityCode}}</h3>
 <div *ngIf="data">
   <h2>Thành phố {{data.name}}, {{data.sys.country}}</h2>
   <h3>Nhiệt độ: {{data.main.temp}}<sup>o</sup>C</h3>

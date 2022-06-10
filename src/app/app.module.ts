@@ -8,6 +8,20 @@ import {ProductsComponent} from "./products/products.component";
 import {ProductComponent} from "./product/product.component";
 import {WeatherComponent} from "./weather/weather.component";
 import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import {RouterModule, Routes} from "@angular/router";
+
+const appRoutes: Routes = [
+  {
+    path: '', component: ClassroomComponent
+  },
+  {
+    path: 'san-pham', component: ProductsComponent
+  },
+  {
+    path: 'thoi-tiet', component: WeatherComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -19,7 +33,9 @@ import {HttpClientModule} from "@angular/common/http";
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
