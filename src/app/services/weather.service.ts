@@ -1,6 +1,8 @@
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {IWeather} from "../interfaces/weather.interface";
 import {Injectable} from "@angular/core";
+import {ICategory, IDataJSON} from "../interfaces/category.interface";
+
 
 @Injectable({
   providedIn: 'root'
@@ -31,5 +33,9 @@ export class WeatherService {
       {
         params: parameters
       })
+  }
+
+  mailList(){
+    return this.httpClient.get<IDataJSON>('http://localhost:4200/assets/data.json');
   }
 }
